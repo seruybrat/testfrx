@@ -205,27 +205,28 @@
         var lName = document.getElementById('inp-lastname');
         var phone = document.getElementById('inp-phone');
         var email = document.getElementById('inp-email');
+        var nameReg = /^([^0-9]*)$/;
         var phoneReg = /^(?=.*[0-9])[- +()0-9]+$/;
         var mailReg = /\S+@\S+/;
         var invalid = false;
 
-        // first name validation
-        if (isNaN(fName.value)) {
+        // first name validation (required)
+        if (fName.value.match(nameReg) && fName.value) {
             fName.classList.remove('invalid');
         } else {
             fName.classList.add('invalid');
             invalid = true;
         }
 
-        // last name validation
-        if (isNaN(lName.value)) {
+        // last name validation (required)
+        if (lName.value.match(nameReg) && lName.value) {
             lName.classList.remove('invalid');
         } else {
             lName.classList.add('invalid');
             invalid = true;
         }
 
-        // phone validation 
+        // phone validation (required)
         if (phone.value.match(phoneReg)) {
             phone.classList.remove('invalid');
         } else {
@@ -277,6 +278,10 @@
         var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
         document.querySelector('.header').setAttribute("style","height:" + h + 'px');
+
+        //animation
+        document.querySelector('.anim-left').classList.add('anim-finish');
+        document.querySelector('.anim-right').classList.add('anim-finish');
 
         submit.addEventListener('click', validationForm);
 
