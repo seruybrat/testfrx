@@ -239,6 +239,7 @@
             email.classList.remove('invalid');
         } else {
             email.classList.add('invalid');
+            invalid = true;
         }
 
         var form = document.forms.topForm;
