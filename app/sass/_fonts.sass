@@ -1,0 +1,92 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style)
+    @font-face
+        font-family: $font-family
+        src: url('#{$file-path}.eot')
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype'), url('#{$file-path}.svg') format('svg')
+        font-weight: $font-weight
+        font-style: $font-style
+
+@include font-face('Roboto Regular', '../fonts/Roboto/roboto-regular', 300, normal)
+@include font-face('Roboto Light', '../fonts/Roboto/roboto-light', 100, light)
+@include font-face('Roboto Bold', '../fonts/Roboto/roboto-bold', 600, bold)
+@include font-face('Bebas', '../fonts/Bebas/bebasneueregular', 300, normal)
+
+.icon
+    display: inline-block
+    background-image: url('../img/icons.png')
+   
+.icon
+    &-partner-logo
+        width: 122px
+        height: 57px
+        background-position: 123px 0
+
+    &-award1
+        width: 120px
+        height: 104px
+        background-position: 0 0
+
+    &-award2
+        width: 120px
+        height: 104px
+        background-position: -164px 0
+        
+    &-award3
+        width: 120px
+        height: 104px
+        background-position: -327px 0
+
+    &-spa
+        width: 16px
+        height: 14px
+        background-position: -153px 33px
+
+    &-chi
+        width: 16px
+        height: 14px
+        background-position: -128px 33px
+
+    &-ru
+        width: 16px
+        height: 14px
+        background-position: -103px 33px
+
+    &-webmoney
+        width: 119px
+        height: 32px
+        background-position: 1px -115px
+
+    &-visa
+        width: 63px
+        height: 29px
+        background-position: -130px -120px
+
+    &-skrill
+        width: 63px
+        height: 28px
+        background-position: -204px -121px
+
+    &-yandex
+        width: 97px
+        height: 41px
+        background-position: -277px -106px
+
+    &-mastercard
+        width: 63px
+        height: 37px
+        background-position: -1109px -111px
+
+    &-qiwi
+        width: 97px
+        height: 36px
+        background-position: -389px -110px
+
+    &-mcAfee
+        width: 66px
+        height: 34px
+        background-position: 0 33px
+
+    &-ssl
+        width: 22px
+        height: 22px
+        background-position: -70px 32px

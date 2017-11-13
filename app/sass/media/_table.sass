@@ -1,0 +1,69 @@
+@import "../vars"
+
+@media (max-width: $md)
+
+	.cell-sum
+		width: 40%
+		text-align: center
+
+	.cell-account
+		width: 40%
+		text-align: center
+
+	.cell-country
+		text-align: center
+		width: 20%
+		padding-right: 20px
+
+	.cell-number
+		display: block
+		width: 55px
+		right: 0 !important
+
+	.sort-up,
+	.sort-down
+		position: absolute
+		right: 10px !important
+		left: auto !important
+
+	.sort-down
+		top: 13px
+
+	.sort-up
+		top: 5px
+
+	.table
+		font-size: .9em
+
+	.table__header
+		padding-bottom: 0
+
+		.cell-account, 
+		.cell-country, 
+		.cell-sum
+			position: relative
+			left: 0
+			padding-bottom: 25px
+		
+	
+@media (max-width: $sm)
+
+	.sort-up,
+	.sort-down
+		opacity: 1
+		right: 50% !important
+
+	.sort-down
+		top: 34px
+
+	.sort-up
+		top: 25px
+
+	.cell-left,
+	.cell-number
+		width: 30px
+
+	.align-helper
+		left: 40% !important
+
+

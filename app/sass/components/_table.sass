@@ -1,0 +1,204 @@
+@import "../vars"
+
+.table
+    margin-top: 25px
+    position: relative
+    padding: 15px 10px 60px
+    background-color: #121623
+    border-radius: 5px
+    font-size: 1.125em
+    color: #fefeff
+
+    &__item:after
+        content: ''
+        display: table
+        clear: both
+
+    &__header
+        padding-bottom: 15px
+        font-family: $font-family-accent
+        color: #626e86
+        font-style: italic
+        text-transform: uppercase
+
+        .cell
+            &-sum,
+            &-account,
+            &-country,
+                position: relative
+                right: -30px
+
+                &:hover
+                    .sort-up,
+                    .sort-down
+                        opacity: 1
+
+                .sort-down
+                    left: -11px
+
+            &-left
+                &:hover
+                    .sort-up,
+                    .sort-down
+                        opacity: 1
+
+                .cell-number
+                    position: relative
+                    right: -11px
+
+    &__list
+        .table__item
+            overflow: hidden
+            margin: 1px 0
+            border-radius: 3px
+            background: rgba(58,66,82,1);
+            background: -moz-linear-gradient(top, rgba(58,66,82,1) 0%, rgba(30,35,51,1) 100%)
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(58,66,82,1)), color-stop(100%, rgba(30,35,51,1)))
+            background: -webkit-linear-gradient(top, rgba(58,66,82,1) 0%, rgba(30,35,51,1) 100%)
+            background: -o-linear-gradient(top, rgba(58,66,82,1) 0%, rgba(30,35,51,1) 100%)
+            background: -ms-linear-gradient(top, rgba(58,66,82,1) 0%, rgba(30,35,51,1) 100%)
+            background: linear-gradient(to bottom, rgba(58,66,82,1) 0%, rgba(30,35,51,1) 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a4252', endColorstr='#1e2333', GradientType=0 )
+
+            &.active
+                .cell-sum
+                    color: $accent-color
+                    font-weight: bold
+
+                .cell-left:after
+                    background: rgba(61,66,81,1)
+                    background: -moz-linear-gradient(top, rgba(61,66,81,1) 0%, rgba(249,97,2,1) 100%)
+                    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(61,66,81,1)), color-stop(100%, rgba(249,97,2,1)))
+                    background: -webkit-linear-gradient(top, rgba(61,66,81,1) 0%, rgba(249,97,2,1) 100%)
+                    background: -o-linear-gradient(top, rgba(61,66,81,1) 0%, rgba(249,97,2,1) 100%)
+                    background: -ms-linear-gradient(top, rgba(61,66,81,1) 0%, rgba(249,97,2,1) 100%)
+                    background: linear-gradient(to bottom, rgba(61,66,81,1) 0%, rgba(249,97,2,1) 100%)
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d4251', endColorstr='#f96102', GradientType=0 )
+
+        .cell-left
+            position: relative
+            padding: 10px 7px 10px 0
+
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                left: -5px
+                right: 0
+                bottom: 0
+                width: 100%
+                border-radius: 3px
+                background: rgba(19,23,36,1)
+                background: -moz-linear-gradient(top, rgba(19,23,36,1) 0%, rgba(57,65,81,1) 100%)
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(19,23,36,1)), color-stop(100%, rgba(57,65,81,1)))
+                background: -webkit-linear-gradient(top, rgba(19,23,36,1) 0%, rgba(57,65,81,1) 100%)
+                background: -o-linear-gradient(top, rgba(19,23,36,1) 0%, rgba(57,65,81,1) 100%)
+                background: -ms-linear-gradient(top, rgba(19,23,36,1) 0%, rgba(57,65,81,1) 100%)
+                background: linear-gradient(to bottom, rgba(19,23,36,1) 0%, rgba(57,65,81,1) 100%)
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131724', endColorstr='#394151', GradientType=0 )
+                transform: skew(-12deg)
+                z-index: 0
+
+            .cell-number
+                font-family: $font-family-accent
+                font-style: italic
+                position: relative
+                z-index: 1
+
+        .cell-right
+            padding: 10px 0
+
+        .cell-country
+            &:after
+                content: ''
+                display: inline-block
+                background-image: url('../img/icons.png')
+
+            &.lang
+                &-ru:after
+                    width: 16px
+                    height: 14px
+                    background-position: -103px 33px
+                &-chi:after
+                    width: 16px
+                    height: 14px
+                    background-position: -128px 33px
+                &-spa:after
+                    width: 16px
+                    height: 14px
+                    background-position: -153px 33px
+
+        .align-helper
+            position: absolute
+            top: 0
+            left: 50%
+            margin-left: -15px
+
+    &__btn
+        position: absolute
+        bottom: -25px
+        left: 50%
+        transform: translateX(-50%)
+
+.sort-up,
+.sort-down
+    opacity: 0
+    position: relative
+    display: inline-block
+    width: 0
+    height: 0
+    cursor: pointer
+    transition: all .3s ease
+
+.sort-down
+    left: -10px
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+    border-top: 6px solid #898b91
+
+    &:hover
+        border-top-color: #fff
+
+.sort-up
+    top: -8px
+    left: 4px
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+    border-bottom: 6px solid #898b91
+
+    &:hover
+        border-bottom-color: #fff
+
+.cell
+    &-sum,
+    &-account,
+    &-country,
+        display: block
+        float: left
+        box-sizing: border-box
+
+
+    &-left
+        width: 55px
+        float: left
+
+    &-right
+       overflow: hidden
+
+    &-sum
+        position: relative
+        width: 50%
+        min-height: 15px
+        text-align: center
+
+    &-account
+        width: 25%
+        text-align: right
+
+    &-country
+        width: 25%
+        padding-right: 25px
+        text-align: right
+
+@import "../media/table"

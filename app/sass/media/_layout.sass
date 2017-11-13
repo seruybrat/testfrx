@@ -1,0 +1,64 @@
+@import "../vars"
+
+@media (max-width: $lg)
+
+	.container
+		width: 100%
+		padding: 0 25px
+
+		.inner
+			padding: 0 100px
+
+	.header__title
+		font-size: 4em
+
+@media (max-width: $md)
+
+	.container
+		.inner
+			padding: 0 25px
+
+	.header__title
+		font-size: 3em
+
+	.header__subtiltle
+		font-size: 1.2em
+
+	.btn
+		padding: 10px 35px
+
+	.awards
+		display: none
+	
+@media (max-width: $sm)
+	
+	body
+		min-width: 320px
+
+	.header
+    	min-height: 560px
+
+	.container
+		padding: 0 5px
+		.inner
+			padding: 0
+
+	.header__title
+		margin-top: 50px
+		font-size: 2em
+
+	.header__subtiltle
+		font-size: 1em
+
+	.section__title
+		font-size: 1.4em
+
+	.btn
+		font-size: 1.2em
+
+	.col-sm-12
+		width: 100%
+
+@media (max-width: $md) and (orientation: landscape)
+	.header
+		min-height: 700px !important

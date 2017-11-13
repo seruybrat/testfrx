@@ -1,0 +1,141 @@
+@import "../vars"
+
+// Grid
+
+.container
+    max-width: 960px
+    margin: 0 auto
+    box-sizing: border-box
+
+    .inner
+        padding: 0 160px
+
+.clearfix:after
+    content: ''
+    display: table
+    clear: both
+
+.col-6
+    width: 50%
+    float: left
+    box-sizing: border-box
+
+.btn
+    display: inline-block
+    padding: 10px 95px
+    color: #fff
+    font-size: 1.5em
+    font-weight: normal
+    border: none
+    border-bottom: 3px solid #ca3e00
+    border-radius: 4px
+    background-color: $accent-color
+    text-decoration: none
+    box-sizing: border-box
+    cursor: pointer
+    white-space: nowrap
+    -webkit-appearance: none
+    -webkit-border-radius: 0
+    transition: all .3s ease
+    
+    &:hover
+        background-color: #fd9023
+
+    &:active
+        background-color: #ca3e00
+
+    &:disabled
+        background-color: #ccc
+        border-color: #ccc
+
+//Header
+
+.header
+    min-height: 800px
+    padding: 20px 0 20px
+    background: url(../img/bg.jpg) no-repeat
+    background-size: cover
+    box-sizing: border-box
+
+    &__title
+        font-family: $font-family-accent
+        margin-top: 75px
+        font-size: 5em
+        font-weight: normal
+        font-style: italic
+        color: #fff
+        text-transform: uppercase
+
+    &__subtiltle
+        font-family: $font-family-light
+        margin-top: 20px
+        font-size: 1.5em
+        font-weight: 100
+        color: #fff
+
+    &__left
+        display: block
+        float: left
+
+    &__right
+        display: block
+        float: right
+
+.awards
+    margin-top: 50px
+    text-align: center
+
+    &__pic
+        margin: 0 20px
+
+// Section
+
+.section__title
+    font-family: $font-family-accent
+    font-weight: normal
+    font-style: italic
+    font-size: 2em
+    color: #fff
+
+.tournament
+    padding: 35px 0 60px
+    background-color: #3a4252
+        
+.judge
+    padding: 40px 0 55px
+
+    .section__title
+        color: #333
+
+//Footer
+
+.footer
+    padding: 20px 0 60px
+    background-color: #f6f8fa
+    text-align: center
+    font-size: 0.875em
+
+    &__txt
+        margin: 10px 0 15px
+        color: #333333
+        font-style: normal
+
+.social
+    &__item
+        display: inline-block
+
+
+.security
+    padding-top: 40px
+    color: #848484
+
+    &__item
+        margin: 0 15px
+        display: inline-block
+        vertical-align: middle
+
+        .icon-ssl
+            position: relative
+            top: 4px
+
+@import "../media/layout"
